@@ -58,7 +58,7 @@
 
             bindings = <
 &trans      &kp F1        &kp F2        &kp F3          &kp F4           &kp F5                        &kp F6       &kp F7         &kp F8     &kp F9     &trans     &trans
-&kp GRAVE   &none         &kp LEFT_ALT  &kp LCTRL       &kp LEFT_SHIFT   &none                         &kp N6       &kp BACKSPACE  &kp ENTER  &kp END    &kp HOME   &kp PRINTSCREEN
+&kp GRAVE   &none         &kp LEFT_ALT  &kp LCTRL       &kp LEFT_SHIFT   &none                         &kp N6       &kp BACKSPACE  &kp ENTER  &kp HOME   &kp END    &kp PRINTSCREEN
 &kp ESCAPE  &LeftBracket  &RightPar     &kp LEFT_BRACE  &kp RIGHT_BRACE  &none                         &trans       &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &kp DELETE
 &none       &none         &kp ASTERISK  &kp AMPERSAND   &kp PIPE         &none    &trans       &trans  &kp KP_PLUS  &kp MINUS      &kp EQUAL  &kp SLASH  &none      &none
                                         &trans          &trans           &kp TAB  &kp LCTRL    &trans  &trans       &trans         &trans
