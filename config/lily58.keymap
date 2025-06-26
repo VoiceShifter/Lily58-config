@@ -32,21 +32,21 @@
         Copy: cutNpase {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LCTRL &kp C>;
+            bindings = <&kt LCTRL &kp C &kt LCTRL>;
             label = "CUTNPASE";
         };
 
         Cut: Cut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LCTRL &kp X>;
+            bindings = <&kt LCTRL &kp X &kt LCTRL>;
             label = "CUT";
         };
 
         Paste: Paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LCTRL &kp V>;
+            bindings = <&kt LCTRL &kp V &kt LCTRL>;
             label = "PASTE";
         };
 
