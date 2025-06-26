@@ -49,6 +49,13 @@
             bindings = <&kp LCTRL &kp V>;
             label = "PASTE";
         };
+
+        LanguageSwap: LanguageSwap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_SHIFT>;
+            label = "LANGUAGESWAP";
+        };
     };
 
     keymap {
@@ -67,7 +74,7 @@
 &kp TAB            &kp Q   &kp W   &kp E     &kp R             &kp T                                  &kp Y          &kp U   &kp I          &kp O    &kp P     &kp MINUS
 &kp RIGHT_CONTROL  &kp A   &kp S   &kp D     &kp F             &kp G                                  &kp H          &kp J   &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LEFT_ALT       &kp Z   &kp X   &kp C     &kp V             &kp B           &kp LBKT     &kp RBKT  &kp N          &kp M   &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                                   &kp LWIN  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SPACE    &kp RET   &kp BACKSPACE  &mo 1   &kp RIGHT_ALT
+                                   &kp LWIN  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SPACE    &kp RET   &kp BACKSPACE  &mo 1   &LanguageSwap
             >;
         };
 
