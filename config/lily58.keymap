@@ -44,6 +44,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
         };
+
+        underscoreNminus: underscoreNminus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDERSCORENMINUS";
+            bindings = <&kp UNDERSCORE>, <&kp KP_MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+        };
     };
 
     macros {
@@ -105,11 +114,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans      &kp F1        &kp F2        &kp F3          &kp F4       &kp F5                    &kp F6       &kp F7         &kp F8        &kp F9          &kp F10    &kp F11
-&kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow  &Cut                      &none        &kp BACKSPACE  &kp ENTER     &kp HOME        &kp END    &kp PRINTSCREEN
-&kp ESCAPE  &kp LEFT_ALT  &kp TAB       &kp LEFT_SHIFT  &kp LCTRL    &Paste                    &trans       &kp LEFT       &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp DELETE
-&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp PIPE     &Copy   &trans    &trans  &kp KP_PLUS  &kp MINUS      &kp EQUAL     &kp SLASH       &none      &none
-                                        &trans          &trans       &trans  &trans    &trans  &trans       &trans         &trans
+&trans      &kp F1        &kp F2        &kp F3          &kp F4       &kp F5                    &kp F6       &kp F7             &kp F8        &kp F9          &kp F10    &kp F11
+&kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow  &Cut                      &none        &kp BACKSPACE      &kp ENTER     &kp HOME        &kp END    &kp PRINTSCREEN
+&kp ESCAPE  &kp LEFT_ALT  &kp TAB       &kp LEFT_SHIFT  &kp LCTRL    &Paste                    &trans       &kp LEFT           &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp DELETE
+&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp PIPE     &Copy   &trans    &trans  &kp KP_PLUS  &underscoreNminus  &kp EQUAL     &kp SLASH       &none      &none
+                                        &trans          &trans       &trans  &trans    &trans  &trans       &trans             &trans
             >;
         };
     };
