@@ -53,7 +53,7 @@
         LanguageSwap: LanguageSwap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_SHIFT>;
+            bindings = <&kt LCTRL &kp LEFT_SHIFT &kt LCTRL>;
             label = "LANGUAGESWAP";
         };
     };
