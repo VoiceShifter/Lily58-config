@@ -26,6 +26,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
         };
+
+        LeftArrow: LeftArrow {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFTARROW";
+            bindings = <&kp LEFT_BRACE>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+        };
+
+        RightArrow: RightArrow {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHTARROW";
+            bindings = <&kp RIGHT_BRACE>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+        };
     };
 
     macros {
@@ -87,11 +105,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans      &kp F1        &kp F2        &kp F3          &kp F4           &kp F5                    &kp F6       &kp F7         &kp F8     &kp F9     &kp F10    &kp F11
-&kp GRAVE   &kp TAB       &kp LEFT_ALT  &kp LCTRL       &kp LEFT_SHIFT   &Cut                      &none        &kp BACKSPACE  &kp ENTER  &kp HOME   &kp END    &kp PRINTSCREEN
-&kp ESCAPE  &LeftBracket  &RightPar     &kp LEFT_BRACE  &kp RIGHT_BRACE  &Paste                    &trans       &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &kp DELETE
-&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp PIPE         &Copy   &trans    &trans  &kp KP_PLUS  &kp MINUS      &kp EQUAL  &kp SLASH  &none      &none
-                                        &trans          &trans           &trans  &trans    &trans  &trans       &trans         &trans
+&trans      &kp F1        &kp F2        &kp F3         &kp F4          &kp F5                    &kp F6       &kp F7         &kp F8        &kp F9          &kp F10    &kp F11
+&kp GRAVE   &kp TAB       &kp LEFT_ALT  &kp LCTRL      &kp LEFT_SHIFT  &Cut                      &none        &kp BACKSPACE  &kp ENTER     &kp HOME        &kp END    &kp PRINTSCREEN
+&kp ESCAPE  &LeftBracket  &RightPar     &LeftArrow     &RightArrow     &Paste                    &trans       &kp LEFT       &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp DELETE
+&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND  &kp PIPE        &Copy   &trans    &trans  &kp KP_PLUS  &kp MINUS      &kp EQUAL     &kp SLASH       &none      &none
+                                        &trans         &trans          &trans  &trans    &trans  &trans       &trans         &trans
             >;
         };
     };
