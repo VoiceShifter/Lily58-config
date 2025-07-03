@@ -100,6 +100,13 @@
             bindings = <&kt RIGHT_ALT &kp RIGHT_SHIFT &kt RIGHT_ALT>;
             label = "SWAP_LANG_LINUX";
         };
+
+        Terminal: Terminal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL &kt LALT &kp T &kt LCTRL &kt LEFT_ALT>;
+            label = "TERMINAL";
+        };
     };
 
     keymap {
@@ -141,11 +148,11 @@
 
         layer_2 {
             bindings = <
-&trans   &trans  &trans  &trans      &trans        &trans                    &trans  &trans  &trans     &trans  &trans   &trans
-&trans   &trans  &trans  &kp LSHIFT  &kp LEFT_ALT  &trans                    &trans  &trans  &kp LCTRL  &trans  &trans   &trans
-&kp F12  &kp F1  &kp F2  &kp F3      &kp F4        &kp F5                    &kp F6  &kp F7  &kp F8     &kp F9  &kp F10  &kp F11
-&trans   &trans  &trans  &trans      &trans        &trans  &trans    &trans  &trans  &trans  &trans     &trans  &trans   &trans
-                         &trans      &trans        &trans  &trans    &trans  &trans  &trans  &trans
+&trans   &trans           &trans             &trans      &trans        &trans                    &trans  &trans  &trans     &trans  &trans   &trans
+&trans   &trans           &trans             &kp LSHIFT  &kp LEFT_ALT  &trans                    &trans  &trans  &kp LCTRL  &trans  &trans   &trans
+&kp F12  &kp F1           &kp F2             &kp F3      &kp F4        &kp F5                    &kp F6  &kp F7  &kp F8     &kp F9  &kp F10  &kp F11
+&trans   &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &Terminal   &trans        &trans  &trans    &trans  &trans  &trans  &trans     &trans  &trans   &trans
+                                             &trans      &trans        &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
