@@ -111,28 +111,28 @@
         TileUp: TileUp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RIGHT_ALT &kp UP &kt RIGHT_ALT>;
+            bindings = <&kt RIGHT_ALT &kp UP>;
             label = "TILEUP";
         };
 
         TileLeft: TileLeft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RIGHT_ALT &kp LEFT &kt RIGHT_ALT>;
+            bindings = <&kt RIGHT_ALT &kp LEFT>;
             label = "TILELEFT";
         };
 
         TileRight: TileRight {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RIGHT_ALT &kp RIGHT &kt RIGHT_ALT>;
+            bindings = <&kt RIGHT_ALT &kp RIGHT>;
             label = "TILERIGHT";
         };
 
         TileDown: TileDown {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RIGHT_ALT &kp DOWN &kt RIGHT_ALT>;
+            bindings = <&kt RIGHT_ALT &kp DOWN>;
             label = "TILEDOWN";
         };
     };
