@@ -107,6 +107,34 @@
             bindings = <&kt LCTRL &kt LALT &kp T &kt LCTRL &kt LEFT_ALT>;
             label = "TERMINAL";
         };
+
+        TileUp: TileUp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_WIN &kp UP &kt LEFT_WIN>;
+            label = "TILEUP";
+        };
+
+        TileDown: TileDown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_WIN &kp DOWN &kt LEFT_WIN>;
+            label = "TILEDOWN";
+        };
+
+        TileLeft: TileLeft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_WIN &kp LEFT &kt LEFT_WIN>;
+            label = "TILELEFT";
+        };
+
+        TileRight: TileRight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_WIN &kp RIGHT &kt LEFT_WIN>;
+            label = "TILERIGHT";
+        };
     };
 
     keymap {
@@ -148,11 +176,11 @@
 
         layer_2 {
             bindings = <
-&trans   &trans           &trans             &trans      &trans        &trans                    &trans  &trans  &trans     &trans  &trans   &trans
-&trans   &trans           &trans             &kp LSHIFT  &kp LEFT_ALT  &trans                    &trans  &trans  &kp LCTRL  &trans  &trans   &trans
-&kp F12  &kp F1           &kp F2             &kp F3      &kp F4        &kp F5                    &kp F6  &kp F7  &kp F8     &kp F9  &kp F10  &kp F11
-&trans   &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &Terminal   &trans        &trans  &trans    &trans  &trans  &trans  &trans     &trans  &trans   &trans
-                                             &trans      &trans        &trans  &trans    &trans  &trans  &trans  &trans
+&trans   &trans           &trans             &trans      &trans        &trans                    &trans  &trans     &trans     &trans     &trans      &trans
+&trans   &trans           &trans             &kp LSHIFT  &kp LEFT_ALT  &trans                    &trans  &trans     &kp LCTRL  &trans     &trans      &trans
+&kp F12  &kp F1           &kp F2             &kp F3      &kp F4        &kp F5                    &kp F6  &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
+&trans   &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &Terminal   &trans        &trans  &trans    &trans  &trans  &TileLeft  &TileUp    &TileDown  &TileRight  &trans
+                                             &trans      &trans        &trans  &trans    &trans  &trans  &trans     &trans
             >;
         };
     };
