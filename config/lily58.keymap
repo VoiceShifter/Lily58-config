@@ -170,7 +170,7 @@
 &kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow  &Cut                          &none          &kp BACKSPACE      &kp ENTER     &kp HOME        &kp END          &kp PRINTSCREEN
 &kp ESCAPE  &kp LEFT_ALT  &kp TAB       &kp LEFT_SHIFT  &kp LCTRL    &Paste                        &trans         &kp LEFT           &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT        &kp DELETE
 &none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp PIPE     &Copy       &trans    &trans  &kp BACKSLASH  &underscoreNminus  &kp EQUAL     &kp SLASH       &kp EXCLAMATION  &kp INSERT
-                                        &trans          &mo 2        &kp LSHIFT  &trans    &trans  &trans         &trans             &trans
+                                        &kp LEFT_GUI    &mo 2        &kp LSHIFT  &trans    &trans  &trans         &trans             &trans
             >;
         };
 
