@@ -63,6 +63,16 @@
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
         };
+
+        F_ALT_MODE: F_ALT_MODE {
+            compatible = "zmk,behavior-hold-tap";
+            label = "F_ALT_MODE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -149,11 +159,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3    &kp N4         &kp N5                                 &kp N6                        &kp N7             &kp N8         &kp N9   &kp N0    &kp GRAVE
-&kp TAB           &kp Q   &kp W   &kp E     &kp R          &kp T                                  &kp Y                         &kp U              &kp I          &kp O    &kp P     &kp MINUS
-&kp LEFT_CONTROL  &kp A   &kp S   &kp D     &kp F          &kp G                                  &kp H                         &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LEFT_ALT      &kp Z   &kp X   &kp C     &kp V          &kp B           &kp LBKT     &kp RBKT  &kp N                         &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                                  &kp LWIN  &kp RIGHT_ALT  &kp LEFT_SHIFT  &kp SPACE    &kp RET   &delete_or_layer 1 BACKSPACE  &kp RIGHT_CONTROL  &LanguageSwap
+&kp ESC           &kp N1  &kp N2  &kp N3    &kp N4                  &kp N5                                 &kp N6                        &kp N7             &kp N8         &kp N9   &kp N0    &kp GRAVE
+&kp TAB           &kp Q   &kp W   &kp E     &kp R                   &kp T                                  &kp Y                         &kp U              &kp I          &kp O    &kp P     &kp MINUS
+&kp LEFT_CONTROL  &kp A   &kp S   &kp D     &F_ALT_MODE LEFT_ALT F  &kp G                                  &kp H                         &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LEFT_ALT      &kp Z   &kp X   &kp C     &kp V                   &kp B           &kp LBKT     &kp RBKT  &kp N                         &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                                  &kp LWIN  &kp RIGHT_ALT           &kp LEFT_SHIFT  &kp SPACE    &kp RET   &delete_or_layer 1 BACKSPACE  &kp RIGHT_CONTROL  &LanguageSwap
             >;
         };
 
@@ -167,9 +177,9 @@
 
             bindings = <
 &trans      &kp F1        &kp F2        &kp F3          &kp F4          &kp F5                    &kp F6         &kp F7             &kp F8        &kp F9          &kp F10          &kp F11
-&kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow     &Cut                      &none          &kp BACKSPACE      &kp ENTER     &kp HOME        &kp END          &kp PRINTSCREEN
+&kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow     &Copy                     &kp ESCAPE     &kp BACKSPACE      &kp ENTER     &kp HOME        &kp END          &kp PRINTSCREEN
 &kp ESCAPE  &kp LEFT_ALT  &kp TAB       &kp LEFT_SHIFT  &kp LCTRL       &Paste                    &kp PERCENT    &kp LEFT           &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT        &kp DELETE
-&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp PIPE        &Copy   &trans    &trans  &kp BACKSLASH  &underscoreNminus  &kp EQUAL     &kp SLASH       &kp EXCLAMATION  &kp INSERT
+&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp PIPE        &Cut    &trans    &trans  &kp BACKSLASH  &underscoreNminus  &kp EQUAL     &kp SLASH       &kp EXCLAMATION  &kp INSERT
                                         &kp LEFT_GUI    &kp LEFT_SHIFT  &mo 2   &trans    &trans  &trans         &trans             &trans
             >;
         };
