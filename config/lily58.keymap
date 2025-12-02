@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -187,11 +188,11 @@
 
         layer_2 {
             bindings = <
-&none         &none            &none              &none       &none         &none                     &none   &none      &none      &none      &none       &none
-&out OUT_TOG  &out OUT_BLE     &out OUT_USB       &kp LSHIFT  &kp LEFT_ALT  &none                     &none   &none      &kp LCTRL  &none      &none       &none
-&kp F12       &kp F1           &kp F2             &kp F3      &kp F4        &kp F5                    &kp F6  &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
-&none         &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &Terminal   &none         &none   &trans    &trans  &none   &TileLeft  &TileUp    &TileDown  &TileRight  &none
-                                                  &none       &none         &trans  &trans    &trans  &trans  &trans     &trans
+&bt BT_CLR_ALL  &none            &none              &none       &none         &none                     &none   &none      &none      &none      &none       &none
+&out OUT_TOG    &bt BT_SEL 0     &bt BT_DISC 0      &kp LSHIFT  &kp LEFT_ALT  &none                     &none   &none      &kp LCTRL  &none      &none       &none
+&kp F12         &kp F1           &kp F2             &kp F3      &kp F4        &kp F5                    &kp F6  &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
+&none           &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &Terminal   &none         &none   &trans    &trans  &none   &TileLeft  &TileUp    &TileDown  &TileRight  &none
+                                                    &none       &none         &trans  &trans    &trans  &trans  &trans     &trans
             >;
         };
     };
