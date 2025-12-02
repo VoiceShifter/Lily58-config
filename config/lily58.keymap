@@ -187,11 +187,11 @@
 
         layer_2 {
             bindings = <
-&trans        &trans           &trans             &trans      &trans        &trans                    &trans  &trans     &trans     &trans     &trans      &trans
+&none         &none            &none              &none       &none         &none                     &none   &none      &none      &none      &none       &none
 &out OUT_TOG  &out OUT_BLE     &out OUT_USB       &kp LSHIFT  &kp LEFT_ALT  &none                     &none   &none      &kp LCTRL  &none      &none       &none
 &kp F12       &kp F1           &kp F2             &kp F3      &kp F4        &kp F5                    &kp F6  &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
 &none         &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &Terminal   &none         &none   &trans    &trans  &none   &TileLeft  &TileUp    &TileDown  &TileRight  &none
-                                                  &trans      &trans        &trans  &trans    &trans  &trans  &trans     &trans
+                                                  &none       &none         &trans  &trans    &trans  &trans  &trans     &trans
             >;
         };
     };
