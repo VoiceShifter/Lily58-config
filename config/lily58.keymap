@@ -152,7 +152,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
@@ -169,7 +169,7 @@
             >;
         };
 
-        raise_layer {
+        general-purpose {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -178,21 +178,31 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans      &kp F1        &kp F2        &kp F3          &kp F4             &kp F5                    &kp F6         &kp F7             &kp F8        &kp F9          &kp F10          &kp F11
-&kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow        &Copy                     &kp ESCAPE     &kp BACKSPACE      &kp ENTER     &kp HOME        &kp END          &kp PRINTSCREEN
-&kp ESCAPE  &kp LEFT_ALT  &kp TAB       &kp LEFT_SHIFT  &kp LCTRL          &Paste                    &kp PERCENT    &kp LEFT           &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT        &kp DELETE
-&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp CARET          &Cut    &trans    &trans  &kp BACKSLASH  &underscoreNminus  &kp EQUAL     &kp SLASH       &kp EXCLAMATION  &kp INSERT
+&trans      &kp F1        &kp F2        &kp F3          &kp F4             &kp F5                    &kp F6         &kp F7             &kp F8     &kp F9     &kp F10          &kp F11
+&kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow        &Copy                     &kp ESCAPE     &kp BACKSPACE      &kp ENTER  &kp HOME   &kp END          &kp PRINTSCREEN
+&kp ESCAPE  &kp LEFT_ALT  &kp TAB       &kp LEFT_SHIFT  &kp LCTRL          &Paste                    &kp PERCENT    &kp UP_ARROW       &kp DOWN   &kp LEFT   &kp RIGHT        &kp DELETE
+&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp CARET          &Cut    &trans    &trans  &kp BACKSLASH  &underscoreNminus  &kp EQUAL  &kp SLASH  &kp EXCLAMATION  &kp INSERT
                                         &kp LEFT_GUI    &kp K_APPLICATION  &mo 2   &trans    &trans  &trans         &trans             &trans
             >;
         };
 
-        layer_2 {
+        f-keys {
             bindings = <
-&bt BT_CLR_ALL  &none            &none              &none       &none         &none                     &none   &none      &none      &none      &none       &none
+&bt BT_CLR_ALL  &none            &none              &none       &none         &none                     &none   &none      &none      &none      &none       &to 3
 &out OUT_TOG    &bt BT_SEL 0     &bt BT_DISC 0      &kp LSHIFT  &kp LEFT_ALT  &none                     &none   &none      &kp LCTRL  &none      &none       &none
 &kp F12         &kp F1           &kp F2             &kp F3      &kp F4        &kp F5                    &kp F6  &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
 &none           &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &Terminal   &none         &none   &trans    &trans  &none   &TileLeft  &TileUp    &TileDown  &TileRight  &none
                                                     &none       &none         &trans  &trans    &trans  &trans  &trans     &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4         &kp N5                            &kp N6    &kp N7             &kp N8         &kp N9   &kp N0    &to 0
+&kp TAB    &kp Q   &kp W   &kp E     &kp R          &kp T                             &kp Y     &kp U              &kp I          &kp O    &kp P     &kp MINUS
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F          &kp G                             &kp H     &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LALT   &kp Z   &kp X   &kp C     &kp V          &kp B      &kp LBKT     &kp RBKT  &kp N     &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp LWIN  &kp RIGHT_ALT  &kp LSHFT  &kp SPACE    &kp RET   &kp BSPC  &kp RIGHT_CONTROL  &LanguageSwap
             >;
         };
     };
