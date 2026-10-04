@@ -178,10 +178,10 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans      &kp F1        &kp F2        &kp F3          &kp F4             &kp F5                    &kp F6         &kp F7             &kp F8     &kp F9     &kp F10          &kp F11
-&kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow        &Copy                     &kp ESCAPE     &kp BACKSPACE      &kp ENTER  &kp HOME   &kp END          &kp PRINTSCREEN
-&kp ESCAPE  &kp LEFT_ALT  &kp TAB       &kp LEFT_SHIFT  &kp LCTRL          &Paste                    &kp PERCENT    &kp UP_ARROW       &kp DOWN   &kp LEFT   &kp RIGHT        &kp DELETE
-&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp CARET          &Cut    &trans    &trans  &kp BACKSLASH  &underscoreNminus  &kp EQUAL  &kp SLASH  &kp EXCLAMATION  &kp INSERT
+&trans      &kp F1        &kp F2        &kp F3          &kp F4             &kp F5                    &kp F6         &kp F7             &kp F8        &kp F9     &kp F10          &kp F11
+&kp GRAVE   &LeftBracket  &RightPar     &LeftArrow      &RightArrow        &Copy                     &kp ESCAPE     &kp BACKSPACE      &kp ENTER     &kp HOME   &kp END          &kp PRINTSCREEN
+&kp ESCAPE  &kp LEFT_ALT  &kp TAB       &kp LEFT_SHIFT  &kp LCTRL          &Paste                    &kp PERCENT    &kp DOWN           &kp UP_ARROW  &kp LEFT   &kp RIGHT        &kp DELETE
+&none       &kp HASH      &kp ASTERISK  &kp AMPERSAND   &kp CARET          &Cut    &trans    &trans  &kp BACKSLASH  &underscoreNminus  &kp EQUAL     &kp SLASH  &kp EXCLAMATION  &kp INSERT
                                         &kp LEFT_GUI    &kp K_APPLICATION  &mo 2   &trans    &trans  &trans         &trans             &trans
             >;
         };
